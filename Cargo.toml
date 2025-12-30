@@ -8,7 +8,9 @@ authors = ["DreamingCodes <me@dreaming.codes>"]
 crate-type = ["cdylib"]
 
 [profile.release]
-lto = true
+lto = "fat"
+opt-level = "s"
+panic = "abort"
 strip = true
 codegen-units = 1
 
