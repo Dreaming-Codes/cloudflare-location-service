@@ -13,6 +13,10 @@ opt-level = "s"
 panic = "abort"
 strip = true
 codegen-units = 1
+overflow-checks = false
+
+[package.metadata.wasm-pack.profile.release]
+wasm-opt = ["-O4", "--enable-simd"]
 
 [dependencies]
 worker = { version = "0.7" }
